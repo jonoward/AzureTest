@@ -148,7 +148,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AzureTest.Service\AzureTest.Service.csproj">
+    <ProjectReference Include="..\AzureTest.Service\AzureTest.Service.csproj">
       <Project>{a16fd6e7-2eba-454a-bf94-089a99d1ffc8}</Project>
       <Name>AzureTest.Service</Name>
     </ProjectReference>
