@@ -42,7 +42,6 @@ If ($existingSite) {
     Exit
 }
 
-
 "Getting GitHub credentials..."
 $ghCredentials = Get-Credential -Message "GitHub login"
 
