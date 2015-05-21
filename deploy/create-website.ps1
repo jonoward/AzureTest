@@ -34,15 +34,24 @@ $urlSafeBranchName = $branchName -replace "feature/", "f/"
 $urlSafeBranchName = $urlSafeBranchName -replace "/", "-"
 $siteName = "jonoazuretest-$urlSafeBranchName"
 
+# Check that site doesn't already exist
+$existingSite = Get-AzureWebsite -Name $siteName
+
+If ($existingSite) {
+    "$siteName already exists, git push this branch to update it. Shutting down..."
+    Exit
+}
+
+
 "Getting GitHub credentials..."
 $ghCredentials = Get-Credential -Message "GitHub login"
 
 "Attempting to create site $siteName..."
-New-AzureWebsite -Location "West Europe" -Name $siteName -GithubCredentials $ghCredentials -GithubRepository "jonoward/AzureTest"
+New-AzureWebsite -Location "West Europe" -Name $siteName -GitHub -GithubCredentials $ghCredentials -GithubRepository "jonoward/AzureTest"
 "Site $siteName created"
 
 # Hack to fix race condition where the line does not find a resource (assumed)
-Start-Sleep -s 1
+Start-Sleep -s 10
 
 "Attempting to Change the SKU (pricing plan) and serverFarm (AppServicePlan)..."
 Switch-AzureMode AzureResourceManager
