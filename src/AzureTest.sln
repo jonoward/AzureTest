@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTest.Test", "AzureTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTest.Service", "AzureTest.Service\AzureTest.Service.csproj", "{A16FD6E7-2EBA-454A-BF94-089A99D1FFC8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E68B4569-A45F-4E0D-A4F2-0809ADD33382}"
+	ProjectSection(SolutionItems) = preProject
+		..\.deployment = ..\.deployment
+		..\deploy.cmd = ..\deploy.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
