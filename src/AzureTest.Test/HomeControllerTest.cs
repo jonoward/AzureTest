@@ -12,7 +12,7 @@
         {
             var controller = new HomeController();
             var result = controller.Index();
-            Assert.IsInstanceOf<ViewResult>(result);
+            Assert.IsInstanceOf<RedirectResult>(result);
         }
     }
 }
