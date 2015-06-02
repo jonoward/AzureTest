@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <NuGetPackageImportStamp>488f1a8f</NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/7475e2c6-3bf9-4313-ac47-9fce9fc1473c/resourcegroups/DefaultResourceGroup/providers/microsoft.insights/components/jonoazuretest</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +45,18 @@
     </Reference>
     <Reference Include="Microsoft.ApplicationInsights">
       <HintPath>..\packages\Microsoft.ApplicationInsights.0.17.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.PerfCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.0.17.0\lib\net45\Microsoft.ApplicationInsights.Extensibility.PerfCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.0.17.0\lib\net45\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Extensibility.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.0.17.0\lib\net45\Microsoft.ApplicationInsights.Extensibility.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights.Web.TelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.TelemetryChannel.0.17.0\lib\net45\Microsoft.ApplicationInsights.Web.TelemetryChannel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Diagnostics.Instrumentation.Extensions.Intercept">
@@ -104,6 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gulpfile.js" />
+    <Content Include="Scripts\ai.0.15.0-build12287.js" />
+    <Content Include="Scripts\ai.0.15.0-build12287.min.js" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -114,6 +130,7 @@
     <Content Include="packages.config" />
     <Content Include="Content\app.less" />
     <Content Include="package.json" />
+    <Content Include="ApplicationInsights.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
