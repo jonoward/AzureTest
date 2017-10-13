@@ -1,0 +1,8 @@
+{
+  "name": "AzureTest",
+  "dependencies": {
+    "axios": "0.16.2",
+    "babel-polyfill": "6.23.0",
+    "cookie-parser": "1.4.3"
+  }
+}
